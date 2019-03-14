@@ -1,0 +1,44 @@
+{
+  "name": "react-restricted",
+  "version": "1.0.0",
+  "description": "Permission-based view restrictions for React.",
+  "main": "src/index.js",
+  "repository": "https://github.com/crisu83/react-restricted",
+  "author": "Christoffer Niska <christofferniska@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "tslint": "tslint-config-prettier-check ./tslint.json"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-router": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.8",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.1",
+    "jest": "^24.5.0",
+    "jest-environment-jsdom": "^24.5.0",
+    "mkdirp": "^0.5.1",
+    "prettier": "^1.16.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.8.4",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.6.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-watch": "^4.3.1",
+    "tslib": "^1.9.3",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {}
+}
