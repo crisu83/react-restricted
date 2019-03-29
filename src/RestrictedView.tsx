@@ -1,17 +1,17 @@
 import * as React from "react";
-import RestrictedContext from "./RestrictedContext";
+import useRestricted from "./useRestricted";
 
 interface IRestrictedViewProps {
   requiredPermission: string;
-  children: React.ReactChildren;
 }
 
-function RestrictedView({
+const RestrictedView: React.FunctionComponent<IRestrictedViewProps> = ({
   requiredPermission,
   children
-}: IRestrictedViewProps) {
-  const { hasPermission } = React.useContext(RestrictedContext);
-  return hasPermission(requiredPermission) ? children : null;
-}
+}) => {
+  const { hasPermission } = useRestricted();
+
+  return <>{hasPermission(requiredPermission) ? children : null}</>;
+};
 
 export default RestrictedView;

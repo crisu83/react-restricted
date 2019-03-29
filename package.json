@@ -2,7 +2,8 @@
   "name": "react-restricted",
   "version": "1.0.0",
   "description": "Permission-based view restrictions for React.",
-  "main": "src/index.js",
+  "main": "src/index.tsx",
+  "typings": "src/index.d.ts",
   "repository": "https://github.com/crisu83/react-restricted",
   "author": "Christoffer Niska <christofferniska@gmail.com>",
   "license": "MIT",
@@ -10,7 +11,8 @@
     "clean": "rimraf dist && mkdirp dist",
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "test": "jest",
+    "test": "jest --no-cache",
+    "test:watch": "jest --watch",
     "tslint": "tslint-config-prettier-check ./tslint.json"
   },
   "peerDependencies": {
@@ -18,15 +20,21 @@
     "react-router": "^4.3.1"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.11",
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
     "@types/react-router": "^4.4.5",
     "@types/react-router-dom": "^4.3.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "jest": "^24.5.0",
     "jest-environment-jsdom": "^24.5.0",
+    "jsdom": "^14.0.0",
     "mkdirp": "^0.5.1",
     "prettier": "^1.16.4",
+    "raf": "^3.4.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router": "^4.3.1",
@@ -36,13 +44,12 @@
     "rollup": "^1.6.0",
     "rollup-plugin-typescript": "^1.0.0",
     "rollup-watch": "^4.3.1",
+    "ts-jest": "^24.0.0",
     "tslib": "^1.9.3",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.3.3333"
   },
-  "dependencies": {
-    "ts-jest": "^24.0.0"
-  }
+  "dependencies": {}
 }
