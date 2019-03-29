@@ -2,21 +2,27 @@
   "name": "react-restricted",
   "version": "1.0.0",
   "description": "Permission-based view restrictions for React.",
-  "main": "src/index.tsx",
-  "typings": "src/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/crisu83/react-restricted",
   "author": "Christoffer Niska <christofferniska@gmail.com>",
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",
-    "build": "rollup -c",
+    "build": "yarn clean && rollup -c",
     "watch": "rollup -cw",
     "test": "jest --no-cache",
     "test:watch": "jest --watch",
     "tslint": "tslint-config-prettier-check ./tslint.json"
   },
   "peerDependencies": {
-    "react": "^16.8.4"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "@types/enzyme": "^3.9.1",
@@ -39,7 +45,8 @@
     "react-test-renderer": "^16.8.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.6.0",
-    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.20.1",
     "rollup-watch": "^4.3.1",
     "ts-jest": "^24.0.0",
     "tslib": "^1.9.3",
