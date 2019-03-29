@@ -1,16 +1,17 @@
 # React Restricted
 
+[![Build Status](https://travis-ci.com/crisu83/react-restricted.svg?branch=master)](https://travis-ci.com/crisu83/react-restricted)
+
 Permission-based view restrictions for React.
 
 ## Requirements
 
 - React >= 16.8.0
-- React Router >= 4.0.0
 
 ## Install
 
 ```sh
-yarn add react-restricted react react-dom react-router react-router-dom
+yarn add react-restricted react react-dom
 ```
 
 ## Usage
@@ -26,26 +27,6 @@ function ViewExample() {
       <RestrictedView requiredPermission="somePermission">
         <SomeComponent />
       </RestrictedView>
-    </RestrictedProvider>
-  );
-}
-```
-
-### RestrictedRoute component
-
-```ts
-import { RestrictedProvider, RestrictedRoute } from "react-restricted";
-
-function RouteExample() {
-  return (
-    <RestrictedProvider permissions={["somePermission"]}>
-      <Switch>
-        <RestrictedRoute
-          path="/some-path"
-          requiredPermission="somePermission"
-          component={SomeComponent}
-        />
-      </Switch>
     </RestrictedProvider>
   );
 }

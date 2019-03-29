@@ -16,8 +16,7 @@
     "tslint": "tslint-config-prettier-check ./tslint.json"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-router": "^4.3.1"
+    "react": "^16.8.4"
   },
   "devDependencies": {
     "@types/enzyme": "^3.9.1",
@@ -37,8 +36,6 @@
     "raf": "^3.4.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
     "react-test-renderer": "^16.8.4",
     "rimraf": "^2.6.3",
     "rollup": "^1.6.0",
