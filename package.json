@@ -2,9 +2,9 @@
   "name": "react-restricted",
   "version": "1.0.0",
   "description": "Permission-based view restrictions for React.",
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "jsnext:main": "dist/es/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
