@@ -42,7 +42,7 @@ function ContextExample() {
     <RestrictedProvider permissions={["somePermission"]}>
       <RestrictedConsumer>
         {({ hasPermission }) =>
-          hasPermission("somePermission") ? <SomeComponent /> : null
+          hasPermission("somePermission") ? <SomeComponent /> : <SomeOtherComponent />
         }
       </RestrictedConsumer>
     </RestrictedProvider>
