@@ -60,7 +60,7 @@ function HookExample() {
 
   return hasPermission("somePermission")
     ? <SomeComponent>
-    : null
+    : <SomeOtherComponent />
 }
 ```
 
